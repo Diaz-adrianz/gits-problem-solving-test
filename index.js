@@ -1,6 +1,7 @@
 const readline = require('readline');
 const { run_sloane } = require('./A000124_sloane_oeis');
 const { run_dense_rangking } = require('./dense_ranking');
+const { run_balanced_bracker } = require('./balanced_bracket');
 
 const rl = readline.createInterface({
 	input: process.stdin,
@@ -32,6 +33,9 @@ async function main() {
 				break;
 			case '2':
 				await run_dense_rangking(question);
+				break;
+			case '3':
+				await run_balanced_bracker(question);
 				break;
 			default:
 				play = false;
